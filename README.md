@@ -1,4 +1,4 @@
-# automatic-wiki-links-llm-app
+# auto-wiki-links-llm-app
 
 This is a Shiny for Python app that takes a body of text and adds Wikipedia links 
 to important keywords in the text. It uses the OpenAI API to determine
