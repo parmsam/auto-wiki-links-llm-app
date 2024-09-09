@@ -17,6 +17,14 @@ the important keywords and then checks if a Wikipedia page exists for
 each keyword. If a Wikipedia page exists, the keyword is replaced with
 a link to the Wikipedia page. The text is markdown formatted. 
 """
+
+default_text = """
+Evangelion is set 15 years after a worldwide cataclysm in the futuristic 
+fortified city of Tokyo-3. The protagonist is Shinji Ikari, a teenage boy 
+recruited by his father Gendo to the mysterious organization Nerv. Shinji 
+must pilot an Evangelion, a giant biomechanical mecha, and fight beings known 
+as Angels.
+"""
     
 app_ui = ui.page_fluid(
     ui.h1("Text to Markdown with Wikipedia Links"),
@@ -25,7 +33,13 @@ app_ui = ui.page_fluid(
         "OpenAI API Key",
         value = api_key1,
     ),
-    ui.input_text_area("text_input", "Enter your text:", rows=5, width = "100%"),
+    ui.input_text_area(
+        "text_input", 
+        "Enter your text:", 
+        rows=5, 
+        width = "100%",
+        value = default_text,
+    ),
     ui.output_ui("markdown_output"),
     ui.input_action_button("generate", "Generate Markdown"),
     ui.input_action_button("copy", "Copy to Clipboard", class_="btn-primary"),
