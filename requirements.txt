@@ -1,4 +1,3 @@
 urllib3
 OpenAI
-urllib
 shiny
